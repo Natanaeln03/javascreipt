@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Número</title>
+    <style>
+       
+    </style>
+</head>
+<body>
+    <h1>Calculadora</h1>
+    <h2>n1</h2>
+    <input type="number" name="n1" id="n1"> <br>
+    <input type="button" value="calcular quadrado" onclick=""><br>
+    <input type="button" value="calcular cubo"><br>
+    <input type="button" value="calcular raiz quadrada"><br>
+
+    
+    
+    <h2>n1</h2>
+    <input type="number" name="n2" id="n2"> <br>
+    <input type="button" value="somar">
+    <input type="button" value="multiplicar"><br>
+    <input type="button" value="dividir"><br>
+    <input type="button" value="subtrair"><br>
+    <div id="res">Resultado</div>
+
+    <script>
+
+        var n1 = window.document.getElementById('n1')
+        var n2 = window.document.querySelector('input.n2')
+        var n1 = Number(n1.value)
+        var n2 = Number(n2.value)
+        var s = n1 + n2
+        var res = window.document.getElementById('res')
+        res.innerHTML = `A soma entre ${n1} + ${n2} é igual a <strong>${s}<strong>` 
+    </script>
+    
+    
+</body>
+</html>
