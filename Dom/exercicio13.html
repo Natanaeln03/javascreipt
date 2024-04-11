@@ -5,36 +5,104 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Somando Número</title>
     <style>
-       
+       body {
+        font: normal 18pt Arial;
+        background-color: black;
+        color: white;
+        
+       }
+
+       input {
+        font: normal 18pt Arial;
+       }
+
+
     </style>
 </head>
 <body>
     <h1>Calculadora</h1>
-    <h2>n1</h2>
+    <span>n1</span>
     <input type="number" name="n1" id="n1"> <br>
-    <input type="button" value="calcular quadrado" onclick=""><br>
-    <input type="button" value="calcular cubo"><br>
-    <input type="button" value="calcular raiz quadrada"><br>
-
+    <input type="button" value="calcular quadrado" onclick="calcularQuadrado()"><br>
+    <input type="button" value="calcular cubo" onclick="calcularCubo()"><br>
+    <input type="button" value="calcular raiz quadrada" onclick="calcularRaizQuadrada()"><br>
     
     
-    <h2>n1</h2>
+    <span>n2</span>
     <input type="number" name="n2" id="n2"> <br>
-    <input type="button" value="somar">
-    <input type="button" value="multiplicar"><br>
-    <input type="button" value="dividir"><br>
-    <input type="button" value="subtrair"><br>
+    <input type="button" value="somar" onclick="somar()"><br>
+    <input type="button" value="multiplicar" onclick="multiplicar()"><br>
+    <input type="button" value="dividir" onclick="dividir()"><br>
+    <input type="button" value="subtrair" onclick="subtrair()"><br>
     <div id="res">Resultado</div>
 
     <script>
 
-        var n1 = window.document.getElementById('n1')
-        var n2 = window.document.querySelector('input.n2')
-        var n1 = Number(n1.value)
-        var n2 = Number(n2.value)
+        var num1 
+        var num2 
+
+        function calcularquadrado(){
+        var n1 = Number.window.getElementById('n1'.value)
+        var n2 = Number.window.querySelector('n2'.value)
+        var Resultado = n1 + n2
+    
+       }
+
+       function calcularcubo(){
+        var n1 = Number.window.getElementById('n1'.value)
+        var n2 = Number.window.querySelector('n2'.value)
+        var cubo = n1 + n2
+        var res = window.document.getElementById('res')
+        res.innerHTML = `O calculo cubo de ${n1} + ${n2} é igual a <strong>${cubo}<strong>`
+        
+       }
+
+       function calcularraizquadrada(){
+        var n1 = Number.window.getElementById('n1'.value)
+        var n2 = Number.window.querySelector('n2'.value)
+        var raizquadrada = n1 ^ n2
+        var res = window.document.getElementById('res')
+        res.innerHTML = `O calculo da raiz quadrada de ${n1} ^ ${n2} é igual a <strong>${raizquadrada}<strong>`
+        
+       }
+
+           
+       function soma(){
+        var n1 = Number.window.getElementById('n1'.value)
+        var n2 = Number.window.querySelector('n2'.value)
         var s = n1 + n2
         var res = window.document.getElementById('res')
-        res.innerHTML = `A soma entre ${n1} + ${n2} é igual a <strong>${s}<strong>` 
+        res.innerHTML = `A soma entre ${n1} + ${n2} é igual a <strong>${s}<strong>`
+        
+       }
+       
+       function multiplicar(){
+        var n1 = Number.window.getElementById('n1'.value)
+        var n2 = Number.window.querySelector('n2'.value)
+        var multiplicação = n1 * n2
+        var res = window.document.getElementById('res')
+        res.innerHTML = `A multiplicação de ${n1} * ${n2} é igual a <strong>${multiplicação}<strong>`
+        
+       }
+
+       function dividir(){
+        var n1 = Number.window.getElementById('n1'.value)
+        var n2 = Number.window.querySelector('n2'.value)
+        var divisão = n1 / n2
+        var res = window.document.getElementById('res')
+        res.innerHTML = `A divisão de ${n1} / ${n2} é igual a <strong>${divisão}<strong>`
+        
+       }
+
+       function subtrair(){
+        var n1 = Number.window.getElementById('n1'.value)
+        var n2 = Number.querySelector('n2'.value)
+        var subtração = n1 - n2
+        var res = window.document.getElementById('res')
+        res.innerHTML = `A subtração ${n1} - ${n2} é igual a <strong>${subtração}<strong>`
+        
+       }
+
     </script>
     
     
