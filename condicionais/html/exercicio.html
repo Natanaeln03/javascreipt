@@ -7,9 +7,16 @@
     <style>
         body {
          font: normal 15pt Arial;
-         background-color: black;
+         background-color: deepskyblue;
          color: white;
          text-align: center;   
+        }
+        .botao {
+            background-color: black;
+            color: white;
+        }
+        .botao:hover {
+            background-color: forestgreen;
         }
         
     </style>
@@ -19,7 +26,7 @@
     <span>Velocidade do carro</span>
     <input type="number" name="txtv1" id="txtv1">
     <span>Km/h</span>
-    <input type="button" value="Verificar" onclick="calcular()">
+    <input class="botao" type="button" value="Verificar" onclick="calcular()">
     <div id="res"></div>
 
     <script>

@@ -7,7 +7,7 @@
     <style>
         body {
             font: normal 15pt Arial;
-            background-color: black;
+            background-color: deepskyblue;
             color: white;
             text-align: center;
 
@@ -20,7 +20,15 @@
         .resultado {
             margin-top: 20pt;
         }
+
+        .botao {
+            background-color: black;
+            color: white; 
+        }
         
+        .botao:hover {
+            background-color: forestgreen;
+        }
 
     </style>
 </head>
@@ -28,7 +36,7 @@
     <h1>Verificação de Nacionalidade</h1>
     <input type="text" id="pais">
     <br>
-    <input type="button" value="Verificar" onclick="VerificarNacionalidade()">
+    <input class="botao" type="button" value="Verificar" onclick="VerificarNacionalidade()">
     <br>
     <div id="res" class="resultado">Resultado</div>
 
