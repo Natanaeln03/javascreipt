@@ -22,14 +22,14 @@
 <body>
     <h1>Calculadora</h1>
     <span>n1</span>
-    <input type="number" name="n1" id="n1"> <br>
+    <input type="number" name="txtn1" id="txtn1"> <br>
     <input type="button" value="calcular quadrado" onclick="calcularQuadrado()"><br>
     <input type="button" value="calcular cubo" onclick="calcularCubo()"><br>
     <input type="button" value="calcular raiz quadrada" onclick="calcularRaizQuadrada()"><br>
     
     
     <span>n2</span>
-    <input type="number" name="n2" id="n2"> <br>
+    <input type="number" name="txtn2" id="txtn2"> <br>
     <input type="button" value="somar" onclick="somar()"><br>
     <input type="button" value="multiplicar" onclick="multiplicar()"><br>
     <input type="button" value="dividir" onclick="dividir()"><br>
@@ -38,71 +38,54 @@
 
     <script>
 
-        var num1 
-        var num2 
+var num1
+        var num2
 
-        function calcularquadrado(){
-        var n1 = Number.window.getElementById('n1'.value)
-        var n2 = Number.window.querySelector('n2'.value)
-        var Resultado = n1 + n2
-    
-       }
+        function calcularQuadrado(){
+            num1 = Number(document.getElementById('txtn1').value)
+            var resultado = num1 * num1
+            document.getElementById('res').innerHTML = `O quadrado de ${num1} é: <strong>${resultado}</strong>`
+        }
 
-       function calcularcubo(){
-        var n1 = Number.window.getElementById('n1'.value)
-        var n2 = Number.window.querySelector('n2'.value)
-        var cubo = n1 + n2
-        var res = window.document.getElementById('res')
-        res.innerHTML = `O calculo cubo de ${n1} + ${n2} é igual a <strong>${cubo}<strong>`
-        
-       }
+        function calcularCubo(){
+            num1 = Number(document.getElementById('txtn1').value)
+            var resultado = num1 * num1 * num1
+            document.getElementById('res').innerHTML = `O cubo de ${num1} é: <strong>${resultado}</strong>`
+        }
 
-       function calcularraizquadrada(){
-        var n1 = Number.window.getElementById('n1'.value)
-        var n2 = Number.window.querySelector('n2'.value)
-        var raizquadrada = n1 ^ n2
-        var res = window.document.getElementById('res')
-        res.innerHTML = `O calculo da raiz quadrada de ${n1} ^ ${n2} é igual a <strong>${raizquadrada}<strong>`
-        
-       }
+        function calcularRaizQuadrada(){
+            num1 = Number(document.getElementById('txtn1').value)
+            var resultado = Math.sqrt(num1)
+            document.getElementById('res').innerHTML = `A raiz quadrada de ${num1} é: <strong>${resultado}</strong>`
+        }
 
-           
-       function soma(){
-        var n1 = Number.window.getElementById('n1'.value)
-        var n2 = Number.window.querySelector('n2'.value)
-        var s = n1 + n2
-        var res = window.document.getElementById('res')
-        res.innerHTML = `A soma entre ${n1} + ${n2} é igual a <strong>${s}<strong>`
-        
-       }
-       
-       function multiplicar(){
-        var n1 = Number.window.getElementById('n1'.value)
-        var n2 = Number.window.querySelector('n2'.value)
-        var multiplicação = n1 * n2
-        var res = window.document.getElementById('res')
-        res.innerHTML = `A multiplicação de ${n1} * ${n2} é igual a <strong>${multiplicação}<strong>`
-        
-       }
+        function somar(){
+            num1 = Number(document.getElementById('txtn1').value)
+            num2 = Number(document.getElementById('txtn2').value)
+            var resultado = num1 + num2
+            document.getElementById('res').innerHTML = `O resultado da soma é: <strong>${resultado}</strong>`
+        }
 
-       function dividir(){
-        var n1 = Number.window.getElementById('n1'.value)
-        var n2 = Number.window.querySelector('n2'.value)
-        var divisão = n1 / n2
-        var res = window.document.getElementById('res')
-        res.innerHTML = `A divisão de ${n1} / ${n2} é igual a <strong>${divisão}<strong>`
-        
-       }
+        function subtrair(){
+            num1 = Number(document.getElementById('txtn1').value)
+            num2 = Number(document.getElementById('txtn2').value)
+            var resultado = num1 - num2;
+            document.getElementById('res').innerHTML = `O resultado da subtração é: <strong>${resultado}</strong>`
+        }
 
-       function subtrair(){
-        var n1 = Number.window.getElementById('n1'.value)
-        var n2 = Number.querySelector('n2'.value)
-        var subtração = n1 - n2
-        var res = window.document.getElementById('res')
-        res.innerHTML = `A subtração ${n1} - ${n2} é igual a <strong>${subtração}<strong>`
-        
-       }
+        function multiplicar(){
+            num1 = Number(document.getElementById('txtn1').value)
+            num2 = Number(document.getElementById('txtn2').value)
+            var resultado = num1 * num2
+            document.getElementById('res').innerHTML = `O resultado da multiplicação é: <strong>${resultado}</strong>`
+        }
 
+        function dividir(){
+            num1 = Number(document.getElementById('txtn1').value)
+            num2 = Number(document.getElementById('txtn2').value)
+            var resultado = num1 / num2
+            document.getElementById('res').innerHTML = `O resultado da divisão é: <strong>${resultado}</strong>`
+        }
     </script>
     
     

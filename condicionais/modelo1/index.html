@@ -6,34 +6,35 @@
     <title>Saudaçôes Animadas</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body onload="Verificar()"> 
+<body onload="carregar()"> 
     <header>
         <h1>Verificador de Idade</h1>
     </header>
-        <section>
-            <div>
-                <p>Ano de Nascimento</p>
-                <input type="number" name="txtano" min="0">
-                <p>Sexo:
+    
+    <section>
+        <div>
+            <p>Ano de Nascimento:</p>
+                <input type="number" name="txtano" id="txtano" min="1900">
+            <p>Sexo:
                 <input type="radio" name="radsex" id="masc" checked>
                 <label for="mas">Masculino</label>
-                <input type="radio" name="radsex" id="fem">
+                <input type="radio" name="radsex"  id="fem">
                 <label for="fem">Feminino</label>
-                </p>
-                <p>
-                    <input type="button" value="Verificar" onclick="Verificar()">
-                </p>
-           
-            </div>
-            <div id="res">
-                Preencha os Dados acima para ver o Resultado!
-            </div>
-        </section>
+            </p>
+            <p>
+                <input type="button" value="Verificar" onclick="verificar()">
+            </p>
+        </div>
 
-        <footer>
-            <p>&copy Vs code corporativo</p>
-        </footer>
-        <script src="script.js"></script>
-    
+        <div id="res">
+            Preencha os dados acima para ver o resultado!
+        </div>
+    </section>
+
+    <footer>
+       <p>&copy VS Code Corporation</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
